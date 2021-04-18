@@ -19,3 +19,11 @@ Route::get('/', function () {
 
 Route::get('register','App\Http\Controllers\Auth\RegisterController@register')->name('register');
 Route::post('register','App\Http\Controllers\Auth\RegisterController@store')->name('register');
+
+
+
+Route::get('login', 'App\Http\Controllers\Auth\LoginController@login')->name('login');
+Route::post('login', 'App\Http\Controllers\Auth\LoginController@authenticate');
+Route::get('logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
+Route::get('home', 'App\Http\Controllers\Auth\LoginController@home')->name('home');
