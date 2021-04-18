@@ -27,3 +27,7 @@ Route::post('login', 'App\Http\Controllers\Auth\LoginController@authenticate');
 Route::get('logout', 'App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 Route::get('home', 'App\Http\Controllers\Auth\LoginController@home')->name('home');
+
+
+Route::get('forget-password', 'App\Http\Controllers\Auth\ForgotPasswordController@getEmail');
+Route::post('forget-password', 'App\Http\Controllers\Auth\ForgotPasswordController@postEmail');
