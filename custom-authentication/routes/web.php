@@ -31,3 +31,6 @@ Route::get('home', 'App\Http\Controllers\Auth\LoginController@home')->name('home
 
 Route::get('forget-password', 'App\Http\Controllers\Auth\ForgotPasswordController@getEmail');
 Route::post('forget-password', 'App\Http\Controllers\Auth\ForgotPasswordController@postEmail');
+
+Route::get('reset-password/{token}', 'App\Http\Controllers\Auth\ResetPasswordController@getPassword');
+Route::post('reset-password', 'App\Http\Controllers\Auth\ResetPasswordController@updatePassword');
